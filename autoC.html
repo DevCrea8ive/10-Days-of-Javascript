@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>autoCounter</title>
+  </head>
+  <body>
+    <div class="counter">
+      <p class="countText">0</p>
+      <button type="button" class="startCount" name="button">Start Count</button>
+      <button type="button" class="stopCount" name="button">Stop Count</button>
+    </div>
+
+  </body>
+</html>
+
+<script>
+    var countText = document.querySelector(".countText");
+    var startCountBtn = document.querySelector(".startCount");
+    var stopCountBtn = document.querySelector(".stopCount");
+    startCountBtn.onclick = () => {
+      startC();
+    }
+    var counter = 0;
+    function startC() {
+    countText.innerHTML = counter++;
+    }
+    function clear() {
+      clearInterval(startC());
+    }
+    setInterval(startC, 1000);
+    stopCountBtn.onclick = () =>{
+      clear();
+    }
+
+  </script>

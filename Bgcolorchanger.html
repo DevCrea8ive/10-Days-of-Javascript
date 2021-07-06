@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Colorchanger</title>
+  </head>
+  <body>
+    <label for="input" class="label">Color:</label>
+    <input type="color" class="bgcol" value="#fff" onclick="colorC">
+
+  </body>
+</html>
+
+<script>
+  var bgcol = document.querySelector(".bgcol");
+  var body = document.querySelector("body");
+  var label = document.querySelector(".label");
+  function colorC () {
+     document.body.style.background = bgcol.value;
+     if(bgcol.value == "#000000"){
+       label.style.background = "white";
+     }else{
+label.style.background = "";
+     }
+  }
+  setInterval(colorC, 100);
+</script>

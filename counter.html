@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter</title>
+</head>
+<body>
+  <div class="counterBox">
+    <h1>Counter</h1>
+    <h2 class="count">0</h2>
+    <div class="btn">
+      <button class="dec">Decrease</button>
+      <button class="res">Reset</button>
+      <button class="inc">Increase</button>
+    </div>
+  </div>
+  
+</body>
+</html>
+<style>
+  body{
+    font-family: poppins;
+    background-color: rgb(213, 224, 226);
+  }
+  .counterBox{
+    text-align: center;
+    margin-top: 80px;
+  }
+  h1{
+    font-size: 100px;
+    color: rgb(62, 59, 80);
+  }
+  h2{
+    font-size: 130px;
+    color: limegreen;
+    margin-top: -60px;
+  }
+  button{
+    padding: 10px 50px;
+    font-size: 28px;
+    margin: -20px 15px;
+    text-transform: uppercase;
+    background: transparent;
+    border: 2px solid rgb(62, 59, 80);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .dec{
+    background-color: rgb(255, 25, 0);
+    color: white;
+  }
+  .dec:hover{
+    background-color: maroon;
+  }
+  .inc:hover{
+    background-color: rgb(35, 124, 17);
+  }
+  .inc{
+    background-color: limegreen;
+    color: white;
+  }
+</style>
+
+<script>
+  var decBtn = document.querySelector(".dec");
+  var incBtn = document.querySelector(".inc");
+  var resBtn = document.querySelector(".res");
+  var count = document.querySelector(".count");
+  var counterText = 0;
+  function cc() {
+  incBtn.onclick = () => {
+    count.innerHTML = counterText+=1;
+  }
+  decBtn.onclick = () => {
+    count.innerHTML = counterText-=1;
+  }
+  resBtn.onclick = () => {
+    count.innerHTML = counterText = 0;
+  }
+  }
+  setInterval(cc, 10);
+</script>

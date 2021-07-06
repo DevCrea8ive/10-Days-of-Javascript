@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Csstest</title>
+  </head>
+  <body>
+    <div class="Maincon">
+      <h1>WordCount</h1>
+      <input type="text" placeholder="Insert Your Words Here....." class="wordIn">
+      <button type="button" class="btn">Count</button>
+      <h2 class="wordVal">0 Word</h2>
+    </div>
+    <style media="screen">
+    #{
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+      .Maincon{
+        padding: 10px;
+        max-width: 660px;
+        background: hotpink;
+        text-align: center;
+        border-radius: 10px;
+      }
+      button{
+        padding: 10px;
+        background: black;
+        border-radius: 6px;
+        font-family: fantasy;
+        outline: none;
+        border: none;
+        color: white;
+      }
+      button:hover{
+        background: white;
+        color: black;
+      }
+      h2,h1{
+        font-family: ravie;
+      }
+      .wordIn{
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        outline: none;
+      }
+    </style>
+    <script>
+      var wordInput = document.querySelector(".wordIn");
+      var wordVal = document.querySelector(".wordVal");
+      var wordBtn = document.querySelector(".btn");
+      wordBtn.onclick = () => {
+        var wordIn = wordInput.value.length;
+        if(wordIn == '') {
+          alert("insert a word");
+        }
+        wordVal.innerText = wordIn + " Words";
+        if(wordIn == '1'){
+          wordVal.innerText = wordIn + " Word";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New</title>
+</head>
+<body>
+	<header><h2>Randomizer</h2></header>
+	<div class="app">
+		<div class="title">
+		<h1>Words Randomizer</h1>
+	</div>
+		<h2 class="randWord">No Word</h2>
+		<button class="rand">Randomize</button>
+	</div>
+
+</body>
+</html>
+<style type="text/css">
+	body{
+		background: hotpink;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+	}
+	header{
+		padding: 10px;
+		width: 100%;
+		background: cyan;
+		text-align: center;
+		font-family: tekton pro;
+	}
+	.app{
+		padding: 20px;
+		background: white;
+		border-radius: 7px;
+		width: 300px;
+		margin: 0 auto;
+				font-family: lucida handwriting;
+		margin-top: 20%;
+		box-shadow: 0px 5px 20px black;
+		text-align: center;
+	}
+	.rand{
+		padding: 1rem;
+		border-radius: 5px;
+		background: cyan;
+		color: black;
+		font-weight: bold;
+		font-family: lucida handwriting;
+		border: none;
+		outline: none;
+	}
+	.title{
+		background: gold;
+		width: 320px;
+		font-size: 10px;
+		margin-top: -30px;
+		color: white;
+		margin-left:-20px;
+		padding: 10px;
+	}
+	.randWord{
+		color: gold;
+	}
+</style>
+<script type="text/javascript">
+	var randWord = document.querySelector(".randWord");
+	document.querySelector(".rand").onclick = function() {
+		var words = ['Card', 'math', 'match', 'perform ', 'name','keyword','class', 'cyan', 'black', 'color', 'hotpink'];
+		var randIn = Math.floor(Math.random() * words.length);
+		randWord.innerHTML = words[randIn];
+	}
+</script>

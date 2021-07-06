@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>arithmetic app by Goodness</title>
+</head>
+<body>
+<form name="cal">
+<div class="container">
+<h1><span>C</span>alc</h1>
+<div class="inputs">
+<input name="a" type="text" class="aa" placeholder="First Number"><br>
+<input name="b" type="text" class="bb" placeholder="Second number"><br>
+<input type="text" name="total" class="equal" >
+</div>
+<div class="buttons">
+<input type="button" class="mathbtn" value="+" onclick="add()">
+<input type="button" class="mathbtn" value="-" onclick="sub()">
+<input type="button" class="mathbtn" value="/" onclick="divide()">
+<input type="button" class="mathbtn" value="*" onclick="mul()">
+</div>
+
+</div>
+</form>
+<div class="banner"><h4>Simple Calculator</h4></div>
+</body>
+</html>
+<script>
+function check() {
+if (cal.a.value == '' || cal.b.value == '') {
+alert("Data is Empty");
+}
+}
+function add() {
+check();
+a = eval(cal.a.value);
+b = eval(cal.b.value);
+c = a + b;
+cal.total.value = c;
+}
+function sub() {
+check();
+a = eval(cal.a.value);
+b = eval(cal.b.value);
+c = a - b;
+cal.total.value = c;
+}
+function divide() {
+check();
+a = eval(cal.a.value);
+b = eval(cal.b.value);
+c = a / b;
+cal.total.value = c;
+}
+function mul() {
+check();
+a = eval(cal.a.value);
+b = eval(cal.b.value);
+c = a * b;
+cal.total.value = c;
+}
+</script>
+
+<style>
+h1{
+font-family: Georgia;
+}
+h1 span{
+color: red;
+font-family: verdana;
+}
+body {
+text-align: center;
+overflow: hidden;
+align-items: center;
+background: black;
+font-family: verdana;
+}
+.container {
+background: linear-gradient( to bottom, yellow, orange);
+width: 300px;
+height: 400px;
+margin: 100px auto;
+border-radius: 22px;
+border-bottom: 3px solid green;
+font-size: 20px;
+box-shadow: -2px 3px 28px rgb(36, 219, 243)
+}
+.inputs .aa{
+width: 280px;
+height: 40px;
+font-size: 20px;
+margin-top: 30px;
+border: none;
+color: #000;
+background: goldenrod;
+border: 3px solid black;
+outline: none;
+border-radius: 8px;
+}
+.inputs .bb{
+width: 280px;
+height: 40px;
+font-size: 20px;
+margin-top: 30px;
+border: none;
+color: #000;
+background: goldenrod;
+border: 3px solid black;
+outline: none;
+border-radius: 8px;
+}
+.inputs .equal{
+width: 100px;
+height: 40px;
+font-size: 20px;
+margin-top: 30px;
+border: none;
+color: #000;
+background: rgba(36, 184, 230, 0.877);
+border: 3px solid black;
+outline: none;
+border-radius: 8px;
+}
+.buttons {
+margin-top: 5px;
+}
+.mathbtn{
+margin: 9px;
+background: black;
+width: 50px;
+height: 30px;
+outline: none;
+color: chartreuse;
+border: 2px solid white;
+border-radius: 15px;
+font-size: 20px;
+}
+.banner{
+width: 200px;
+height: 60px;
+background-color: chocolate;
+position: absolute;
+bottom: 0;
+left: 40%;
+border-top-left-radius: 30px;
+border-top-right-radius: 30px;
+text-align: center;
+box-shadow: 1px 1px 20px rgb(99, 95, 95);
+color: salmon;
+}
+.banner:before{
+content: '';
+width: 100px;
+height: 60px;
+background-color: rgba(53, 54, 51, 0.274);
+position: absolute;
+border-top-right-radius: 30px;
+}
+.banner:hover{
+background-color: rgba(53, 54, 51, 0.274);
+}
+</style>
